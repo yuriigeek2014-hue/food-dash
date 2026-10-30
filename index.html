@@ -101,9 +101,9 @@
 
                 <!-- Кнопки: вертикально на mobile, горизонтально на sm+ -->
                 <div class="flex flex-col sm:flex-row gap-3 mb-10">
-                    <button class="bg-white text-orange-500 font-bold px-6 py-3 rounded-full hover:bg-orange-50 transition-colors">
-                    🛍️ Замовити зараз
-                    </button>
+                    <a href="dish.html" class="inline-block bg-white text-orange-500 font-bold px-6 py-3 rounded-full hover:bg-orange-50 transition-colors text-center">
+                        🛍️ Замовити зараз
+                    </a>
                     <button class="border-2 border-white/50 text-white font-semibold px-6 py-3 rounded-full hover:bg-white/10 transition-colors">
                     📍 Вибрати адресу
                     </button>
@@ -440,6 +440,230 @@
                         </div>
                     </div>
                     </section>
+                    <section class="py-10 bg-white">
+                        <div class="max-w-7xl mx-auto px-6">
+
+                            <!-- relative + overflow-hidden для emoji у фоні -->
+                            <div class="relative overflow-hidden
+                            bg-gradient-to-r from-orange-500 to-yellow-400
+                            rounded-3xl p-8 md:p-12
+                            flex flex-col md:flex-row items-center justify-between gap-6">
+
+                            <!-- Декоративний emoji -- opacity-10 = майже невидимий -->
+                            <div class="absolute right-0 top-0 text-9xl leading-none
+                                opacity-10 pointer-events-none select-none">🍔</div>
+
+                            <!-- Текст: relative z-10 -- поверх emoji -->
+                            <div class="text-white relative z-10">
+                                <span class="text-xs font-bold bg-white/20 px-3 py-1 rounded-full">
+                                ⏰ Тільки сьогодні
+                                </span>
+                                <h2 class="text-3xl md:text-4xl font-black mt-3 mb-2">
+                                Знижка 20% на перше замовлення
+                                </h2>
+                                <p class="text-orange-100 text-sm">
+                                Використай промокод і заощаджуй
+                                </p>
+                            </div>
+
+                            <!-- Промокод: shrink-0 -- не стискається -->
+                            <div class="text-center relative z-10 shrink-0">
+                                <div class="bg-white rounded-2xl px-8 py-4 mb-4 shadow-lg">
+                                <p class="text-xs text-gray-400 mb-1">Промокод</p>
+                                <!-- tracking-widest: великий letter-spacing -->
+                                <p class="text-2xl font-black text-orange-500 tracking-widest">FOOD20</p>
+                                </div>
+                                <button class="bg-gray-900 hover:bg-gray-800 active:scale-95
+                                text-white font-bold px-8 py-3 rounded-full transition-all">
+                                Активувати
+                                </button>
+                            </div>
+
+                            </div>
+                        </div>
+                    </section>
+                    <section class="py-10 bg-white">
+                        <div class="max-w-7xl mx-auto px-6">
+
+                            <!-- relative + overflow-hidden для emoji у фоні -->
+                            <div class="relative overflow-hidden
+                            bg-gradient-to-r from-violet-600 to-purple-500
+                            rounded-3xl p-8 md:p-12
+                            flex flex-col md:flex-row items-center justify-between gap-6">
+
+                            <!-- Декоративний emoji -- opacity-10 = майже невидимий -->
+                            <div class="absolute right-0 top-0 text-9xl leading-none
+                                opacity-10 pointer-events-none select-none">🍣</div>
+
+                            <!-- Текст: relative z-10 -- поверх emoji -->
+                            <div class="text-white relative z-10">
+                                <span class="text-xs font-bold bg-white/20 px-3 py-1 rounded-full">
+                                ⏰ Тільки сьогодні
+                                </span>
+                                <h2 class="text-3xl md:text-4xl font-black mt-3 mb-2">
+                                Знижка 20% на перше замовлення
+                                </h2>
+                                <p class="text-orange-100 text-sm">
+                                Використай промокод і заощаджуй
+                                </p>
+                            </div>
+
+                            <!-- Промокод: shrink-0 -- не стискається -->
+                            <div class="text-center relative z-10 shrink-0">
+                                <div class="bg-white rounded-2xl px-8 py-4 mb-4 shadow-lg">
+                                <p class="text-xs text-gray-400 mb-1">Промокод</p>
+                                <!-- tracking-widest: великий letter-spacing -->
+                                <p class="text-2xl font-black text-violet-600 tracking-widest">SUSHI15</p>
+                                </div>
+                                <button class="bg-gray-900 hover:bg-gray-800 active:scale-95
+                                text-white font-bold px-8 py-3 rounded-full transition-all">
+                                Активувати
+                                </button>
+                            </div>
+
+                            </div>
+                        </div>
+                        </section>
+                        <section class="py-10 bg-gray">
+                            <div class="max-w-7xl mx-auto px-6">
+                                <!-- grid: 1 -> 2 -> 3 колонки -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                                <article class="bg-white rounded-2xl border border-gray-100
+                                    hover:shadow-md transition-shadow flex gap-4 p-4">
+
+                                    <!-- shrink-0: не стискається у flex -->
+                                    <div class="w-24 h-24 shrink-0
+                                    bg-gradient-to-br from-orange-100 to-orange-200
+                                    rounded-xl flex items-center justify-center text-4xl">
+                                    🍔
+                                    </div>
+
+                                    <!-- flex-1 min-w-0: займає решту + дозволяє truncate -->
+                                    <div class="flex-1 min-w-0 flex flex-col">
+
+                                    <!-- truncate: обрізає довгий текст трикрапкою -->
+                                    <h4 class="font-bold text-gray-900 truncate mb-0.5">
+                                        Класичний бургер
+                                    </h4>
+                                    <p class="text-xs text-gray-500 mb-2">Burger Brothers · 4.8★</p>
+
+                                    <!-- mt-auto: притискає ціну донизу картки -->
+                                    <div class="mt-auto flex items-center justify-between">
+                                        <p class="font-black text-orange-500 text-lg">189 ₴</p>
+                                        <button class="bg-orange-500 hover:bg-orange-600 active:scale-95
+                                        text-white text-xs font-bold px-3 py-1.5 rounded-lg transition-all">
+                                        + Додати
+                                        </button>
+                                    </div>
+
+                                    </div>
+                                </article>
+                                <article class="bg-white rounded-2xl border border-gray-100
+                                    hover:shadow-md transition-shadow flex gap-4 p-4">
+
+                                    <!-- shrink-0: не стискається у flex -->
+                                    <div class="w-24 h-24 shrink-0
+                                    bg-gradient-to-br from-red-100 to-red-200
+                                    rounded-xl flex items-center justify-center text-4xl">
+                                    🍕
+                                    </div>
+
+                                    <!-- flex-1 min-w-0: займає решту + дозволяє truncate -->
+                                    <div class="flex-1 min-w-0 flex flex-col">
+
+                                    <!-- truncate: обрізає довгий текст трикрапкою -->
+                                    <h4 class="font-bold text-gray-900 truncate mb-0.5">
+                                        Маргарита 32см
+                                    </h4>
+                                    <p class="text-xs text-gray-500 mb-2">Pizza Roma · 4.7★</p>
+
+                                    <!-- mt-auto: притискає ціну донизу картки -->
+                                    <div class="mt-auto flex items-center justify-between">
+                                        <p class="font-black text-orange-500 text-lg">245 ₴</p>
+                                        <button class="bg-orange-500 hover:bg-orange-600 active:scale-95
+                                        text-white text-xs font-bold px-3 py-1.5 rounded-lg transition-all">
+                                        + Додати
+                                        </button>
+                                    </div>
+
+                                    </div>
+                                </article>
+                                <article class="bg-white rounded-2xl border border-gray-100
+                                    hover:shadow-md transition-shadow flex gap-4 p-4">
+
+                                    <!-- shrink-0: не стискається у flex -->
+                                    <div class="w-24 h-24 shrink-0
+                                    bg-gradient-to-br from-green-100 to-teal-200
+                                    rounded-xl flex items-center justify-center text-4xl">
+                                    🥗
+                                    </div>
+
+                                    <!-- flex-1 min-w-0: займає решту + дозволяє truncate -->
+                                    <div class="flex-1 min-w-0 flex flex-col">
+
+                                    <!-- truncate: обрізає довгий текст трикрапкою -->
+                                    <h4 class="font-bold text-gray-900 truncate mb-0.5">
+                                        Цезар з куркою
+                                    </h4>
+                                    <p class="text-xs text-gray-500 mb-2">Noodle House · 4.6★</p>
+
+                                    <!-- mt-auto: притискає ціну донизу картки -->
+                                    <div class="mt-auto flex items-center justify-between">
+                                        <p class="font-black text-orange-500 text-lg">175 ₴</p>
+                                        <button class="bg-orange-500 hover:bg-orange-600 active:scale-95
+                                        text-white text-xs font-bold px-3 py-1.5 rounded-lg transition-all">
+                                        + Додати
+                                        </button>
+                                    </div>
+
+                                    </div>
+                                </article>
+                                </div>
+                            </div>
+                        </section>
+                        <footer class="bg-gray-900 text-white py-12">
+                            <div class="max-w-7xl mx-auto px-6">
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+
+                                <div>
+                                    <div class="text-xl font-black text-orange-400 mb-3">🍔 FoodDash</div>
+                                    <p class="text-gray-400 text-sm leading-relaxed">
+                                    Найшвидша доставка їжі у Києві.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h6 class="font-bold text-xs uppercase tracking-wider text-gray-500 mb-4">Компанія</h6>
+                                    <!-- space-y-2: відступ між li без margin на кожному -->
+                                    <ul class="space-y-2">
+                                    <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Про нас</a></li>
+                                    <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Кар'єра</a></li>
+                                    <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Блог</a></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h6 class="font-bold text-xs uppercase tracking-wider text-gray-500 mb-4">Контакти</h6>
+                                    <ul class="space-y-2 text-sm text-gray-400">
+                                    <li>📧 hello@fooddash.ua</li>
+                                    <li>📱 0800 123 456</li>
+                                    </ul>
+                                </div>
+
+                                </div>
+
+                                <!-- border-t: лінія-роздільник перед copyright -->
+                                <div class="border-t border-gray-800 pt-6
+                                flex flex-col sm:flex-row items-center justify-between gap-3">
+                                <p class="text-sm text-gray-500">© 2025 FoodDash. Всі права захищені.</p>
+                                <div class="flex gap-4 text-xs text-gray-600">
+                                    <a href="#" class="hover:text-gray-400 transition-colors">Умови</a>
+                                    <a href="#" class="hover:text-gray-400 transition-colors">Конфіденційність</a>
+                                </div>
+                                </div>
+                            </div>
+                            </footer>
 
 </body>
 </html>

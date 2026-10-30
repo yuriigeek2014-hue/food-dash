@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FoodDash</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    colors: {
+                        brand: {
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 font-sans antialiased text-gray-900">
+
+    <!-- Навігація -->
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+            <a href="index.html" class="text-xl font-black text-orange-500">
+                🍔 FoodDash
+            </a>
+
+            <div class="flex items-center gap-4">
+                <button class="hidden md:block text-sm font-medium text-gray-600 hover:text-orange-500">
+                    📍 Київ
+                </button>
+
+                <button class="relative bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-full text-sm font-bold transition-colors">
+                    🛒 Кошик
+                    <span class="absolute -top-1.5 -right-1.5 bg-red-500 text-white text-xs rounded-full size-5 flex items-center justify-center">
+                        3
+                    </span>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Основний контент -->
+    <main class="max-w-5xl mx-auto px-6 py-10">
+
+        <!-- Повернення назад -->
+        <a href="index.html" class="inline-flex items-center gap-2 text-gray-500 hover:text-orange-500 font-semibold text-sm mb-8 transition-colors">
+            ← Назад до меню
+        </a>
+
+        <!-- Картка страви -->
+        <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+
+            <!-- Велике зображення -->
+            <div class="relative h-64 sm:h-96 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center overflow-hidden">
+
+                <span class="text-[150px] sm:text-[200px] drop-shadow-xl">
+                    🍔
+                </span>
+
+                <!-- Бейдж -->
+                <span class="absolute top-5 left-5 bg-orange-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow">
+                    🔥 Популярне
+                </span>
+
+            </div>
+
+            <!-- Інформація про страву -->
+            <div class="p-6 md:p-10">
+
+                <!-- Назва і рейтинг -->
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5">
+
+                    <div>
+                        <p class="text-orange-500 text-sm font-bold mb-2">
+                            🍔 Burger Brothers
+                        </p>
+
+                        <h1 class="text-3xl md:text-4xl font-black text-gray-900">
+                            Класичний бургер
+                        </h1>
+                    </div>
+
+                    <div class="bg-orange-50 rounded-2xl px-4 py-3 flex items-center gap-2 w-fit">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="font-black text-gray-900 text-lg">4.8</span>
+                        <span class="text-gray-400 text-xs"> (256 відгуків)</span>
+                    </div>
+
+                </div>
+
+                <!-- Коротка інформація -->
+                <div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-6">
+
+                    <span>⏱️ 25–35 хв</span>
+                    <span>•</span>
+                    <span>🍽️ 450 г</span>
+                    <span>•</span>
+                    <span>🔥 650 ккал</span>
+
+                </div>
+
+                <!-- Опис -->
+                <div class="mb-8">
+
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">
+                        Опис страви
+                    </h2>
+
+                    <p class="text-gray-500 leading-relaxed">
+                        Соковитий класичний бургер із ніжною яловичою котлетою,
+                        свіжим листям салату, стиглим помідором, сиром чедер
+                        та фірмовим соусом. Усе це у м'якій золотистій булочці
+                        з кунжутом. Ідеальний вибір для справжніх любителів
+                        бургерів!
+                    </p>
+
+                </div>
+
+                <!-- Склад -->
+                <div class="mb-8">
+
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">
+                        Склад
+                    </h2>
+
+                    <div class="flex flex-wrap gap-2">
+
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
+                            🥩 Яловичина
+                        </span>
+
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
+                            🧀 Сир чедер
+                        </span>
+
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
+                            🥬 Салат
+                        </span>
+
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
+                            🍅 Помідор
+                        </span>
+
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
+                            🥯 Булочка
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- Ціна і кнопка -->
+                <div class="border-t border-gray-100 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+
+                    <div>
+                        <p class="text-sm text-gray-400 mb-1">
+                            Ціна страви
+                        </p>
+
+                        <p class="text-4xl font-black text-orange-500">
+                            189 ₴
+                        </p>
+                    </div>
+
+                    <button class="bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold px-10 py-4 rounded-2xl shadow-lg shadow-orange-200 transition-all">
+                        🛒 Додати до кошика
+                    </button>
+
+                </div>
+
+            </div>
+        </article>
+
+        <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 mt-6">
+
+            <div class="relative h-64 sm:h-96 bg-gradient-to-br from-red-400 to-rose-600 flex items-center justify-center overflow-hidden">
+
+                <span class="text-[150px] sm:text-[200px] drop-shadow-xl">
+                    🍕
+                </span>
+
+                <span class="absolute top-5 left-5 bg-orange-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow">
+                    🔥 Популярне
+                </span>
+            </div>
+
+            <div class="p-6 md:p-10">
+
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5">
+                    <div>
+                        <p class="text-orange-500 text-sm font-bold mb-2">
+                            🍕 Pizza Roma
+                        </p>
+                        <h1 class="text-3xl md:text-4xl font-black">
+                            Маргарита 32см
+                        </h1>
+                    </div>
+
+                    <div class="bg-orange-50 rounded-2xl px-4 py-3 flex items-center gap-2 w-fit">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="font-black text-lg">4.7</span>
+                        <span class="text-gray-400 text-xs">(184 відгуки)</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-6">
+                    <span>⏱️ 30–40 хв</span>
+                    <span>•</span>
+                    <span>🍽️ 550 г</span>
+                    <span>•</span>
+                    <span>🔥 720 ккал</span>
+                </div>
+
+                <div class="mb-8">
+                    <h2 class="text-xl font-bold mb-3">Опис страви</h2>
+                    <p class="text-gray-500 leading-relaxed">
+                        Смачна італійська піца Маргарита з хрустким тістом,
+                        соковитим томатним соусом, ніжною моцарелою,
+                        свіжим базиліком та ароматною оливковою олією.
+                        Класичний смак Італії у кожному шматочку!
+                    </p>
+                </div>
+
+                <div class="mb-8">
+                    <h2 class="text-xl font-bold mb-3">Склад</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">🧀 Моцарела</span>
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">🍅 Томатний соус</span>
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">🌿 Базилік</span>
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">🫒 Оливкова олія</span>
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">🍞 Тісто</span>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-100 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+                    <div>
+                        <p class="text-sm text-gray-400 mb-1">Ціна страви</p>
+                        <p class="text-4xl font-black text-orange-500">245 ₴</p>
+                    </div>
+
+                    <button class="bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold px-10 py-4 rounded-2xl shadow-lg shadow-orange-200 transition-all">
+                        🛒 Додати до кошика
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+         <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 mt-6">
+
+            <div class="relative h-64 sm:h-96 bg-gradient-to-br from-purple-400 to-violet-600 flex items-center justify-center overflow-hidden">
+
+                <span class="text-[150px] sm:text-[200px] drop-shadow-xl">
+                    🥗
+                </span>
+
+                <span class="absolute top-5 left-5 bg-orange-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow">
+                    🔥 Популярне
+                </span>
+            </div>
+
+            <div class="p-6 md:p-10">
+
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5">
+                    <div>
+                        <p class="text-orange-500 text-sm font-bold mb-2">
+                            🥗 Noodle House
+                        </p>
+                        <h1 class="text-3xl md:text-4xl font-black">
+                            Цезар з куркою
+                        </h1>
+                    </div>
+
+                    <div class="bg-orange-50 rounded-2xl px-4 py-3 flex items-center gap-2 w-fit">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="font-black text-lg">4.6</span>
+                        <span class="text-gray-400 text-xs">(156 відгуків)</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-6">
+                    <span>⏱️ 25–40 хв</span>
+                    <span>•</span>
+                    <span>🍽️ 350 г</span>
+                    <span>•</span>
+                    <span>🔥 420 ккал</span>
+                </div>
+
+                <div class="mb-8">
+                    <h2 class="text-xl font-bold mb-3">Опис страви</h2>
+                    <p class="text-gray-500 leading-relaxed">
+                        Свіжий салат Цезар із ніжним курячим філе,
+                        хрусткими листями салату, ароматними сухариками,
+                        тертим пармезаном та оригінальним соусом Цезар.
+                        Легка, смачна та поживна страва на кожен день!
+                    </p>
+                </div>
+
+                <div class="mb-8">
+                    <h2 class="text-xl font-bold mb-3">Склад</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">🍗 Куряче філе</span>
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">🥬 Салат</span>
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">🧀 Пармезан</span>
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">🍞 Сухарики</span>
+                        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">🥣 Соус Цезар</span>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-100 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+                    <div>
+                        <p class="text-sm text-gray-400 mb-1">Ціна страви</p>
+                        <p class="text-4xl font-black text-orange-500">175 ₴</p>
+                    </div>
+
+                    <button class="bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold px-10 py-4 rounded-2xl shadow-lg shadow-orange-200 transition-all">
+                        🛒 Додати до кошика
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+                            <div class="max-w-7xl mx-auto px-6">
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+
+                                <div>
+                                    <div class="text-xl font-black text-orange-400 mb-3">🍔 FoodDash</div>
+                                    <p class="text-gray-400 text-sm leading-relaxed">
+                                    Найшвидша доставка їжі у Києві.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h6 class="font-bold text-xs uppercase tracking-wider text-gray-500 mb-4">Компанія</h6>
+                                    <!-- space-y-2: відступ між li без margin на кожному -->
+                                    <ul class="space-y-2">
+                                    <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Про нас</a></li>
+                                    <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Кар'єра</a></li>
+                                    <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Блог</a></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h6 class="font-bold text-xs uppercase tracking-wider text-gray-500 mb-4">Контакти</h6>
+                                    <ul class="space-y-2 text-sm text-gray-400">
+                                    <li>📧 hello@fooddash.ua</li>
+                                    <li>📱 0800 123 456</li>
+                                    </ul>
+                                </div>
+
+                                </div>
+
+                                <!-- border-t: лінія-роздільник перед copyright -->
+                                <div class="border-t border-gray-800 pt-6
+                                flex flex-col sm:flex-row items-center justify-between gap-3">
+                                <p class="text-sm text-gray-500">© 2025 FoodDash. Всі права захищені.</p>
+                                <div class="flex gap-4 text-xs text-gray-600">
+                                    <a href="#" class="hover:text-gray-400 transition-colors">Умови</a>
+                                    <a href="#" class="hover:text-gray-400 transition-colors">Конфіденційність</a>
+                                </div>
+                                </div>
+                            </div>
+                            </footer>
+
+</body>
+</html>
